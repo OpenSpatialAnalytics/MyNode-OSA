@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?eclipse version="3.0"?><plugin> 
+    <!-- This is an example for providing an own category -->
+   <extension point="org.knime.workbench.repository.categories">
+      <category description="Category containing my nodes" icon="icons/default.png" level-id="myNodes" name="My OSA Nodes" path="/"/>
+      <category description="Category containing my Databases" icon="icons/database-128.png" level-id="myDBs" name="MyDBs" path="/myNodes">
+      </category>
+   </extension>
+   
+   
+   <extension point="org.knime.workbench.repository.nodes">
+      <!-- <node category-path="/myNodes" factory-class="org.knime.mynode.MyFirstNodeFactory" id="org.knime.mynode.MyFirstNodeFactory"/> -->
+      <!-- <node category-path="/myNodes/myDBs" factory-class="org.knime.mypgiscon.MyPgisConNodeFactory" id="org.knime.mypgiscon.MyPgisConNodeFactory"/> -->
+      <!-- <node category-path="/myNodes" factory-class="org.knime.myshptest.MyShpTestNodeFactory" id="org.knime.myshptest.MyShpTestNodeFactory"/>-->
+      <node category-path="/myNodes/myDBs" factory-class="org.knime.MyDBTableConn.MyDBTableConnNodeFactory" id="org.knime.MyDBTableConn.MyDBTableConnNodeFactory"/>
+      <node category-path="/myNodes/myDBs" factory-class="org.knime.MyDBConn.MyDBConnNodeFactory" id="org.knime.MyDBConn.MyDBConnNodeFactory"/>
+      <node category-path="/myNodes/myDBs" factory-class="org.knime.MyDBReader.MyDBReaderNodeFactory" id="org.knime.MyDBReader.MyDBReaderNodeFactory"/>
+      <node category-path="/myNodes/myDBs" factory-class="org.knime.MyPortDBReader.MyPortDBReaderNodeFactory" id="org.knime.MyPortDBReader.MyPortDBReaderNodeFactory"/>
+      <node category-path="/myNodes/myDBs" factory-class="org.knime.MyPortDBConn.MyPortDBConnNodeFactory" id="org.knime.MyPortDBConn.MyPortDBConnNodeFactory"/>
+      <node category-path="/myNodes" factory-class="org.knime.MyDocker.MyDockerNodeFactory" id="org.knime.MyDocker.MyDockerNodeFactory"/>
+      <node category-path="/myNodes" factory-class="org.knime.MyWFS.MyWFSNodeFactory" id="org.knime.MyWFS.MyWFSNodeFactory"/>
+      <node category-path="/myNodes/myDBs" factory-class="org.knime.MyDBWriter.MyDBWriterNodeFactory" id="org.knime.MyDBWriter.MyDBWriterNodeFactory"/>
+</extension>
+   <extension point="org.knime.core.PortType">
+      <portType color="#00FF00" hidden="false" name="MyDatabase Conn" objectClass="org.knime.mynode.myport.MyDatabaseConnPortObject" objectSerializer="org.knime.mynode.myport.MyDatabaseConnPortObject$Serializer" specClass="org.knime.mynode.myport.MyDatabaseConnPortObjectSpec" specSerializer="org.knime.mynode.myport.MyDatabaseConnPortObjectSpec$Serializer">
+      </portType>
+   </extension>
+   
+</plugin>
