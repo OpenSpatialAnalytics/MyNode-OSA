@@ -35,6 +35,7 @@ import org.knime.core.node.port.database.DatabaseConnectionSettings;
  * can custom
  * @author TG
  */
+//
 //JDBCConnectorNodeDialog role
 //public class MyDBConnNodeDialog extends DefaultNodeSettingsPane {
 public class MyDBConnNodeDialog extends NodeDialogPane {	

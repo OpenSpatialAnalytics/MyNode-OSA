@@ -13,6 +13,7 @@ import org.knime.core.node.NodeView;
  *
  * @author TG
  */
+//
 public class MyDBConnNodeFactory 
         extends NodeFactory<MyDBConnNodeModel> {
 
